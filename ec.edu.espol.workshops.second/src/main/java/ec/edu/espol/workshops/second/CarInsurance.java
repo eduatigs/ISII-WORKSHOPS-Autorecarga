@@ -15,7 +15,7 @@ public class CarInsurance {
 		float total = Constants.BASE_PREMIUM;
 		if(customer.getAge() < Constants.YOUNG_AGE && !customer.isMaritalStatus() && customer.getSex().equals(Constants.MALE_SEX)){
 			total = total + Constants.ADD_PREMIUM_FOR_YOUNGER_NOT_MARRIED;
-		}else if(customer.getSex().equals("F") || customer.isMaritalStatus()) {
+		}else if(customer.getSex().equals(Constants.FEMALE_SEX) || customer.isMaritalStatus()) {
 			total = total - Constants.SUBSTRACT_PREMIUM_FOR_FEMALE_MARRIED;
 		}else if(customer.getAge() >= Constants.MID_MIN_AGE_FOR_RANGE && customer.getAge() < Constants.MID_MAX_AGE_FOR_RANGE) {
 			total = total - Constants.SUBSTRACT_PREMIUM_FOR_RANGE_AGE;

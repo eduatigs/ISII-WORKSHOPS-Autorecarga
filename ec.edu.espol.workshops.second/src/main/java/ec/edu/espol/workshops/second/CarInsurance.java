@@ -1,24 +1,23 @@
 package ec.edu.espol.workshops.second;
 
+import ec.edu.espol.workshops.second.constants.Constants;
 import ec.edu.espol.workshops.second.models.Customer;
 
 public class CarInsurance {
 
 	private boolean isValidCarInsurance(Customer customer) {
-		if(customer.getAge() >= Constants.MAX_AGE && Constants.IS_REQUIRED_LICENSE) {
-			return false;
-		}
-		return true;
+		
+		return customer.getAge() >= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
 		
 	}
 	
 	private float calculateCarInsurance(Customer customer) {
 		float total = Constants.BASE_PREMIUM;
-		if(customer.getAge() < 25 && !customer.isMaritalStatus() && customer.getSex() == "M"){
+		if(customer.getAge() < Constants.YOUNG_AGE && !customer.isMaritalStatus() && customer.getSex().equals(Constants.MALE_SEX)){
 			total = total + Constants.ADD_PREMIUM_FOR_YOUNGER_NOT_MARRIED;
-		}else if(customer.getSex() == "F" || customer.isMaritalStatus()) {
+		}else if(customer.getSex().equals("F") || customer.isMaritalStatus()) {
 			total = total - Constants.SUBSTRACT_PREMIUM_FOR_FEMALE_MARRIED;
-		}else if(customer.getAge() >= 45 && customer.getAge() < 65) {
+		}else if(customer.getAge() >= Constants.MID_MIN_AGE_FOR_RANGE && customer.getAge() < Constants.MID_MAX_AGE_FOR_RANGE) {
 			total = total - Constants.SUBSTRACT_PREMIUM_FOR_RANGE_AGE;
 		}
 		return total;

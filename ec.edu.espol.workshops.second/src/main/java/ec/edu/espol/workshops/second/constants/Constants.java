@@ -1,8 +1,23 @@
 package ec.edu.espol.workshops.second.constants;
 
-public class Constants {
+/**
+*
+*
+* @author Anyuel Astudillo
+*/
+public final class Constants {
 	
+	/**
+	*
+	*
+	* Base para el calculo de la prima
+	*/
 	public static final float BASE_PREMIUM = 500f;
+	/**
+	*
+	*
+	* Maxima edad para obtner el seguro
+	*/
 	public static final int MAX_AGE_FOR_INSURANCE = 80;
 	public static final int YOUNG_AGE = 25;
 	public static final int MID_MIN_AGE_FOR_RANGE = 45;

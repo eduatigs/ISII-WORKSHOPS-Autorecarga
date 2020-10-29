@@ -2,7 +2,7 @@ package ec.edu.espol.workshops.second;
 
 import ec.edu.espol.workshops.second.constants.Constants;
 import ec.edu.espol.workshops.second.models.Customer;
-
+/*CLase que maneja la prima*/
 public class CarInsurance {
 
 	private boolean isValidCarInsurance(Customer customer) {
@@ -22,7 +22,7 @@ public class CarInsurance {
 		}
 		return total;
 	}
-	
+	/*Obiene el valor de la prima*/
 	public float getPremiumInsurance(Customer customer) {
 		if(isValidCarInsurance(customer)) {
 			return calculateCarInsurance(customer);

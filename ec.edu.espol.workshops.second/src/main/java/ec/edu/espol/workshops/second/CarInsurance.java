@@ -6,11 +6,9 @@ import ec.edu.espol.workshops.second.models.Customer;
 public class CarInsurance {
 
 	private boolean isValidCarInsurance(Customer customer) {
-		
 		return customer.getAge() >= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
-		
 	}
-	
+
 	private float calculateCarInsurance(Customer customer) {
 		float total = Constants.BASE_PREMIUM;
 		if (customer.getAge() < Constants.YOUNG_AGE && !customer.isMaritalStatus() && customer.getSex().equals(Constants.MALE_SEX)){

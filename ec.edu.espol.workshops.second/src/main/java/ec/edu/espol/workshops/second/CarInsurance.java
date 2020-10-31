@@ -24,7 +24,7 @@ public class CarInsurance {
 	}
 	/*Obiene el valor de la prima*/
 	public float getPremiumInsurance(Customer customer) {
-		if(isValidCarInsurance(customer)) {
+		if(customer.isValid() && isValidCarInsurance(customer)) {
 			return calculateCarInsurance(customer);
 		}else {
 			return -1;

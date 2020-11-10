@@ -39,12 +39,6 @@ public class Customer {
 	public void setMaritalStatus(boolean maritalStatus) {
 		this.maritalStatus = maritalStatus;
 	}
-	
-	public boolean isValid() {
-		return (this.sex == 'M' || this.sex == 'F')
-				&&
-				(this.age > 0);
-	}
 
 	@Override
 	public String toString() {

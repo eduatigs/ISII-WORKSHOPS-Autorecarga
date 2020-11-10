@@ -7,7 +7,7 @@ public class CarInsurance {
 
 	private boolean isValidCarInsurance(Customer customer) {
 		
-		return customer.getAge() >= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
+		return customer.getAge() <= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
 		
 	}
 	
@@ -24,7 +24,8 @@ public class CarInsurance {
 	}
 	/*Obiene el valor de la prima*/
 	public float getPremiumInsurance(Customer customer) {
-		if(customer.isValid() && isValidCarInsurance(customer)) {
+		System.out.println(customer);
+		if(isValidCarInsurance(customer)) {
 			return calculateCarInsurance(customer);
 		}else {
 			return -1;

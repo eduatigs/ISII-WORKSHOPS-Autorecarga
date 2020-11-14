@@ -5,13 +5,13 @@ import ec.edu.espol.workshops.second.models.Customer;
 /*CLase que maneja la prima*/
 public class CarInsurance {
 
-	private boolean isValidCarInsurance(Customer customer) {
+	private static boolean isValidCarInsurance(Customer customer) {
 		
 		return customer.getAge() <= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
 		
 	}
 	
-	private float calculateCarInsurance(Customer customer) {
+	private static float calculateCarInsurance(Customer customer) {
 		float total = Constants.BASE_PREMIUM;
 		if(customer.getAge() < Constants.YOUNG_AGE && !customer.isMaritalStatus() && customer.getSex().equals(Constants.MALE_SEX)){
 			total = total + Constants.ADD_PREMIUM_FOR_YOUNGER_NOT_MARRIED;
@@ -23,12 +23,12 @@ public class CarInsurance {
 		return total;
 	}
 	/*Obiene el valor de la prima*/
-	public float getPremiumInsurance(Customer customer) {
+	public  static float getPremiumInsurance(Customer customer) {
 		System.out.println(customer);
 		if(isValidCarInsurance(customer)) {
 			return calculateCarInsurance(customer);
 		}else {
-			return -1;
+			return -1.0f;
 		}
 	}
 }

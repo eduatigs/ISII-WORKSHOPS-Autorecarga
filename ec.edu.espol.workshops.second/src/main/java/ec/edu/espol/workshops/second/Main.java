@@ -16,7 +16,7 @@ public class Main {
 	    
 		System.out.println ("Ingrese el Marital Status:");
 		String maritalStatus = entradaEscaner.nextLine (); 
-		boolean maritalStatusBool=maritalStatus=="true";
+		boolean maritalStatusBool=maritalStatus.equals("true");
 		int age = -1;
 		try {
 			age = Integer.parseInt(edad);
@@ -34,5 +34,6 @@ public class Main {
 			System.out.println("Premium Insurance: "+insurance);
 
 	    }
+	    entradaEscaner.close();
 	}
 }

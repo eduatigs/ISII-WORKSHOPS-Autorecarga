@@ -7,7 +7,7 @@ public class CarInsurance {
 
 	private boolean isValidCarInsurance(Customer customer) {
 		
-		return customer.getAge() <= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE;
+		return customer.getAge() <= Constants.MAX_AGE_FOR_INSURANCE && Constants.IS_REQUIRED_LICENSE && customer.getAge() >= 18 && (customer.getSex().equals("M") || customer.getSex().equals("F"));
 		
 	}
 	

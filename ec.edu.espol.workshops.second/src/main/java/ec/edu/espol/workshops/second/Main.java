@@ -24,15 +24,8 @@ public class Main {
 			System.out.println("Datos mal ingresados, vuelva a ingresarlos");
 		}
 		
-	    if (!(sex.equals("M") || sex.equals("F"))) {
-	    	System.out.println ("Sexo del Custumer incorrecto debe ser F o M");
-	    }else if ((0 > age && age < 100)) {
-	    	System.out.println ("Edad del Custumer incorrecto debe ser entre 0 y 100");
-	    }else {
-	    	Customer customer=new Customer(age, sex, maritalStatusBool );
-	    	float insurance = carInsurance.getPremiumInsurance(customer);	
-			System.out.println("Premium Insurance: "+insurance);
-
-	    }
+		Customer customer=new Customer(age, sex, maritalStatusBool );
+    	float insurance = carInsurance.getPremiumInsurance(customer);	
+		System.out.println("Premium Insurance: "+insurance);
 	}
 }

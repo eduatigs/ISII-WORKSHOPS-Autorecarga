@@ -18,7 +18,7 @@ public class StepsDefs {
 	
 	@Given("The customer is older than {int} years old")
 	public void the_customer_is_older_than_years_old(Integer age) {
-		customer =  new Customer(age, "MALE", true );
+		customer =  new Customer(age, "M", true );
 	}
 	
 

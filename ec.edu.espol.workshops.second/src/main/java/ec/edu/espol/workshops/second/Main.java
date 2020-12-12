@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
+		
 		Scanner entradaEscaner = new Scanner (System.in); 
 		CarInsurance carInsurance = new CarInsurance();
 		System.out.println ("Ingrese los datos del Custumer:");

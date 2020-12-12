@@ -13,6 +13,7 @@ public final class Constants {
 	* Base para el calculo de la prima
 	*/
 	public static final float BASE_PREMIUM = 600f;
+	
 	/**
 	*
 	*

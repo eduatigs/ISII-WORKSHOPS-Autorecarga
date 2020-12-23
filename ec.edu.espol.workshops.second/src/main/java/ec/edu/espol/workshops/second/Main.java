@@ -30,7 +30,7 @@ public class Main {
 	    	System.out.println ("Edad del Customer incorrecto debe ser entre 0 y 100");
 	    }else {
 	    	Customer customer=new Customer(age, sex, maritalStatusBool );
-	    	float insurance = carInsurance.getPremiumInsurance(customer);	
+	    	float insurance = CarInsurance.getPremiumInsurance(customer);	
 			System.out.println("Premium Insurance: "+insurance);
 
 	    }
